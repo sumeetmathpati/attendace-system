@@ -27,7 +27,7 @@ SECRET_KEY = '2d2t=9*$%q+1dxk1d71j9yu)5$2jw_hgmoay=8x*ahl+lgi+x_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.0.104', '127.0.0.1']
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users.apps.UsersConfig',
     'attendance_manager.apps.AttendanceManagerConfig',
+    'widget_tweaks'
 ]
 
 MIDDLEWARE = [
@@ -123,4 +124,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-LOGIN_REDIRECT_URL = 'blog-index'
+LOGIN_REDIRECT_URL = 'index'
