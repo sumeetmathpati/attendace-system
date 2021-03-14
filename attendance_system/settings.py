@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users.apps.UsersConfig',
     'attendance_manager.apps.AttendanceManagerConfig',
-    "django_cron",
 ]
 
 MIDDLEWARE = [
@@ -125,10 +124,3 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = 'blog-index'
-
-BACKGROUND_TASK_RUN_ASYNC = True
-
-# Cron jobs
-CRON_CLASSES = [
-    "attendance_manager.views.MyCronJob",
-]
