@@ -11,8 +11,8 @@ class Class(models.Model):
 
 class Student(models.Model):
     name = models.CharField(max_length=50)
-    mac = models.CharField(max_length=17)
-    email = models.EmailField()
+    mac = models.CharField(max_length=17, unique=True)
+    email = models.EmailField(unique=True)
     class_name = models.ForeignKey(Class, on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
